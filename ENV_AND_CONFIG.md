@@ -1,0 +1,9 @@
+# ENV_AND_CONFIG.md — Sanitized
+BASE_URL=http://fe.garibook.com/
+BROWSER=chromium
+VIEWPORT=1280x800
+MOBILE_NUMBER=<masked>
+OTP_BANNER_SELECTOR=div.alert.alert-info
+SUGGESTION_SELECTOR=ul > li
+SUGGESTION_TIMEOUT_MS=8000
+PROFILE_MODAL_OPTIONAL=true

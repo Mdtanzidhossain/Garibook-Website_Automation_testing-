@@ -1,0 +1,10 @@
+Suite,Module,Feature,ID,Title,Preconditions,Steps,Expected,Priority,Tags,Browser,Automation
+TripBooking,Car Rental,One Way,WEB-BOOK-001,Select car rental one-way and sedan,None,Open Car Rental tab Select One Way Choose Sedan Continue,Sedan one-way summary visible; continue enabled,P1,Smoke,Chromium,Yes
+TripBooking,Auth,OTP Login,WEB-BOOK-002,Request OTP and login,None,Enter mobile Request OTP Parse banner Fill code Continue,User logged in; proceed to booking form,P1,Smoke;Auth,Chromium,Yes
+TripBooking,Booking,Pickup/Drop,WEB-BOOK-003,Enter drop then pickup with suggestion dropdown,Logged in,Drop: 'dhaka medical college hospital' 1st; Pickup: 'cumilla bangladesh' 1st,Both fields resolved to valid locations,P1,Forms,Chromium,Yes
+TripBooking,Booking,Datetime,WEB-BOOK-004,Enter future datetime (tomorrow 12:00 AM),Pickup/Drop set,Fill datetime input,Datetime accepted; no validation error,P1,Datetime,Chromium,Yes
+TripBooking,Booking,Request,WEB-BOOK-005,Submit request including optional profile update,Datetime set,"Click 'Request your trip' If profile modal shown, fill details Submit Click final 'Request your trip'",Request submitted; success indication,P1,Submit,Chromium,Yes
+SiteSmoke,Navigation,Top Links,WEB-SMOKE-010,Click each top-nav link after login,Logged in,"Click Business, Club, Earn, About, Blogs, Campaign",Each page loads; no console errors,P2,Smoke,Chromium,Yes
+SiteSmoke,Profile,Menu & My Trip,WEB-SMOKE-011,Open profile, My Profile & My Trip,Logged in,Open profile menu My Profile back  menu  My Trip Pages render; My Trip list visible,P2,Smoke,Chromium,Yes
+SiteSmoke,Category Tabs,Airport & Car Rental,WEB-SMOKE-012,Switch tabs and verify content,Logged in,Airport Rental scroll Car Rental scroll,Content switches; no layout break,P3,UI,Chromium,Yes
+SiteSmoke,Navigation,Logo Home,WEB-SMOKE-013,Click logo to return home,Logged in; scrolled,Scroll to top Click logo,Home loads without errors,P3,Smoke,Chromium,Yes
